@@ -8,11 +8,11 @@ from math import ceil
 from ortools.sat.python import cp_model
 
 def jobshop():
-    # -------- Instance --------
+    # -------- Instance --------    
     jobs = [
         [(0, 3), (1, 2), (2, 2)],  # Job 0
         [(0, 2), (2, 1), (1, 4)],  # Job 1
-        [(1, 4), (2, 3), (0, 2)],  # Job 2
+        [(1, 4), (2, 3)],  # Job 2
     ]
     J = len(jobs)
     M = 1 + max(m for job in jobs for (m, _) in job)  # machines
